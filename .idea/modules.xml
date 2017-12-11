@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aop/spring-aop.iml" filepath="$PROJECT_DIR$/aop/spring-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-autowired-manual/spring-autowire-manual.iml" filepath="$PROJECT_DIR$/hello-world/spring-autowired-manual/spring-autowire-manual.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-autowired-xml/spring-autowire-xml.iml" filepath="$PROJECT_DIR$/hello-world/spring-autowired-xml/spring-autowire-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-hello/spring-hello.iml" filepath="$PROJECT_DIR$/hello-world/spring-hello/spring-hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-autowired/spring-hello (1).iml" filepath="$PROJECT_DIR$/hello-world/spring-autowired/spring-hello (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-profile/spring-profile.iml" filepath="$PROJECT_DIR$/hello-world/spring-profile/spring-profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-properties-var/spring-properties.iml" filepath="$PROJECT_DIR$/hello-world/spring-properties-var/spring-properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-properties-xml/spring-properties-xml.iml" filepath="$PROJECT_DIR$/hello-world/spring-properties-xml/spring-properties-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-qualifier/spring-qualifier.iml" filepath="$PROJECT_DIR$/hello-world/spring-qualifier/spring-qualifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-scope/spring-scope.iml" filepath="$PROJECT_DIR$/hello-world/spring-scope/spring-scope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-world/spring-spel/spring-spel.iml" filepath="$PROJECT_DIR$/hello-world/spring-spel/spring-spel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+    </modules>
+  </component>
+</project>

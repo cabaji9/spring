@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-aop" />
+        <module name="spring-autowire-manual" />
+        <module name="spring-autowire-xml" />
+        <module name="spring-hello" />
+        <module name="spring-hello (1)" />
+        <module name="spring-profile" />
+        <module name="spring-properties" />
+        <module name="spring-properties-xml" />
+        <module name="spring-qualifier" />
+        <module name="spring-scope" />
+        <module name="spring-spel" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-aop" target="1.5" />
+      <module name="spring-autowire-manual" target="1.5" />
+      <module name="spring-autowire-xml" target="1.5" />
+      <module name="spring-hello" target="1.5" />
+      <module name="spring-hello (1)" target="1.5" />
+      <module name="spring-profile" target="1.5" />
+      <module name="spring-properties" target="1.5" />
+      <module name="spring-properties-xml" target="1.5" />
+      <module name="spring-qualifier" target="1.5" />
+      <module name="spring-scope" target="1.5" />
+      <module name="spring-spel" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
