@@ -3,10 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aop/spring-aop.iml" filepath="$PROJECT_DIR$/aop/spring-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop-xml/spring-aop-xml.iml" filepath="$PROJECT_DIR$/aop-xml/spring-aop-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop-xml-additional/spring-aop-xml-additional.iml" filepath="$PROJECT_DIR$/aop-xml-additional/spring-aop-xml-additional.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-world/spring-autowired-manual/spring-autowire-manual.iml" filepath="$PROJECT_DIR$/hello-world/spring-autowired-manual/spring-autowire-manual.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-world/spring-autowired-xml/spring-autowire-xml.iml" filepath="$PROJECT_DIR$/hello-world/spring-autowired-xml/spring-autowire-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datasource/bean-datasource/spring-bean-datasource.iml" filepath="$PROJECT_DIR$/datasource/bean-datasource/spring-bean-datasource.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-world/spring-hello/spring-hello.iml" filepath="$PROJECT_DIR$/hello-world/spring-hello/spring-hello.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-world/spring-autowired/spring-hello (1).iml" filepath="$PROJECT_DIR$/hello-world/spring-autowired/spring-hello (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa/spring-jpa.iml" filepath="$PROJECT_DIR$/jpa/spring-jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-world/spring-profile/spring-profile.iml" filepath="$PROJECT_DIR$/hello-world/spring-profile/spring-profile.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-world/spring-properties-var/spring-properties.iml" filepath="$PROJECT_DIR$/hello-world/spring-properties-var/spring-properties.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-world/spring-properties-xml/spring-properties-xml.iml" filepath="$PROJECT_DIR$/hello-world/spring-properties-xml/spring-properties-xml.iml" />

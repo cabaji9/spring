@@ -15,6 +15,7 @@ http://www.springframework.org/schema/aop
 
     <!-- Aspect -->
     <bean id="logAspect" class="com.hson.core.aop.LogginAspect" />
+    <bean id="logAspectPerformance" class="com.hson.core.aop.LoggingAspectPerformance" />
 
 
 </beans>

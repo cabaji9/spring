@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-aop" />
+        <module name="spring-aop-xml" />
+        <module name="spring-aop-xml-additional" />
         <module name="spring-autowire-manual" />
         <module name="spring-autowire-xml" />
+        <module name="spring-bean-datasource" />
         <module name="spring-hello" />
         <module name="spring-hello (1)" />
+        <module name="spring-jpa" />
         <module name="spring-profile" />
         <module name="spring-properties" />
         <module name="spring-properties-xml" />
@@ -21,10 +25,14 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-aop" target="1.5" />
+      <module name="spring-aop-xml" target="1.5" />
+      <module name="spring-aop-xml-additional" target="1.5" />
       <module name="spring-autowire-manual" target="1.5" />
       <module name="spring-autowire-xml" target="1.5" />
+      <module name="spring-bean-datasource" target="1.8" />
       <module name="spring-hello" target="1.5" />
       <module name="spring-hello (1)" target="1.5" />
+      <module name="spring-jpa" target="1.5" />
       <module name="spring-profile" target="1.5" />
       <module name="spring-properties" target="1.5" />
       <module name="spring-properties-xml" target="1.5" />
