@@ -25,12 +25,28 @@
     </jdbc:initialize-database>
 
 
+
+
+
+    <bean id="transactionManager"
+    class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <property name="dataSource" ref="dataSource" />
+    </bean>
+
+
     <bean id="simpleJdbcDao" class="com.hson.core.dao.SimpleJdbcDao">
         <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+
+    <bean id="transactionManagerDao" class="com.hson.core.dao.TransactionManagerDao">
+        <property name="dataSource" ref="dataSource"></property>
+
     </bean>
 
 
 
 
 
-</beans>
+
+        </beans>

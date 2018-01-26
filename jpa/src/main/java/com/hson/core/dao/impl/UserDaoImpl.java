@@ -5,6 +5,7 @@ import com.hson.core.dao.UserDao;
 import com.hson.core.model.UserEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +20,7 @@ import java.util.List;
 
 @Repository
 @Transactional
+@Qualifier("userDaoImpl")
 public class UserDaoImpl implements UserDao {
 
     private static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);

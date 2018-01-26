@@ -20,7 +20,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("springbeans.xml");
 
-        UserDao daoExample = ctx.getBean(UserDao.class);
+        UserDao daoExample = (UserDao) ctx.getBean("userDaoImpl");
 
         UserEntity userEntity = new UserEntity();
         userEntity.setName("uno");
@@ -31,6 +31,13 @@ public class App {
         List<UserEntity> list = daoExample.obtainUserEntityAll();
         logger.info("list is {}",list);
 
+        userEntity = new UserEntity();
+        userEntity.setName("TRANSACTION UNO");
+
+         UserDao userDaoTransactionImpl=(UserDao) ctx.getBean("userDaoTransactionImplTemplate");
+        userDaoTransactionImpl.insert(userEntity);
+        List<UserEntity> userEntityList = userDaoTransactionImpl.obtainUserEntityAll();
+        logger.info("list is {}",userEntityList);
 
 
     }

@@ -2,6 +2,7 @@ package com.hson.core;
 
 import com.hson.core.dao.DaoExample;
 import com.hson.core.dao.SimpleJdbcDao;
+import com.hson.core.dao.TransactionManagerDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -33,6 +34,14 @@ public class App {
 
         names = simpleJdbcDao.getNames();
         logger.info("names obtained jdbc {}", names);
+
+
+        TransactionManagerDao transactionManagerDao = ctx.getBean(TransactionManagerDao.class);
+
+        transactionManagerDao.insert(5,"MISMO");
+        transactionManagerDao.insert(6,"MISMO");
+
+
 
     }
 }
