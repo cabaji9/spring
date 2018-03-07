@@ -6,12 +6,52 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <context:property-placeholder location="app.properties"></context:property-placeholder>
 
 
-    <bean id="compactDisc" class="com.hson.core.bean.SgtPeppers"
-    c:title="${title}" c:artist="${artist}"
-    >
+    <bean id="compactDisc" class="com.hson.core.bean.SgtPeppers">
     </bean>
+
+    <bean id="blankDisc" class="com.hson.core.bean.BlankDisc"
+          c:title="uno" c:artist="dos">
+        <constructor-arg>
+            <list>
+                <value>primero</value>
+                <value>segundo</value>
+            </list>
+
+        </constructor-arg>
+    </bean>
+
+    <bean id="cdPlayer" class="com.hson.core.bean.CDPlayer">
+
+        <constructor-arg ref="compactDisc"/>
+    </bean>
+
+
+
+
+    <bean id="cdPlayeBlankr" class="com.hson.core.bean.CDPlayer">
+
+        <constructor-arg ref="blankDisc"/>
+    </bean>
+
+
+    <bean id="cdPlayerMethodWire" class="com.hson.core.bean.CDPlayerMethodWire">
+
+       <property name="cd" ref="blankDisc" />
+        <property name="method" value="Method property"/>
+
+    </bean>
+
+
+    <bean id="cdPlayerMethodWireNameSpace" class="com.hson.core.bean.CDPlayerMethodWire"
+    p:cd-ref="blankDisc" p:method="Namespace p "
+    >
+
+
+    </bean>
+
+
+
 
 </beans>
