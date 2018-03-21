@@ -52,6 +52,14 @@
     </div>
 
 
+    <form action="<c:url value="/button" />" method="GET" modelAttribute="userFormData">
+        <input type="text" name="name" />
+
+        <input type="submit" name="action" value="save" />
+    </form>
+
+    time is: ${timeActual}
+
 
 </div>
 

@@ -21,11 +21,17 @@
 
         <csrf disabled="true"/>
 
+        <remember-me  key="spitterKey" token-validity-seconds="120"  />
+
     </http>
+
+
     <authentication-manager>
         <authentication-provider>
             <user-service>
                 <user name="user1" password="user1Pass" authorities="ROLE_USER" />
+                <user name="bat" password="bat" authorities="ROLE_BATMAN" />
+
             </user-service>
         </authentication-provider>
     </authentication-manager>

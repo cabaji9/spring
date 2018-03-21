@@ -16,6 +16,14 @@
             <td><input type='password' name='password' /></td>
         </tr>
         <tr>
+            <td>
+                <input id="remember_me" name="_spring_security_remember_me" type="checkbox"/>
+                <label for="remember_me" class="inline">Remember me</label>
+
+            </td>
+
+        </tr>
+        <tr>
             <td><input name="submit" type="submit" value="submit" /></td>
         </tr>
     </table>
