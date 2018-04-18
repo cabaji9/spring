@@ -1,0 +1,50 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+       http://activemq.apache.org/schema/core
+        http://activemq.apache.org/schema/core/activemq-core.xsd
+        http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+
+    <context:component-scan base-package="com.hson" />
+
+
+    <amq:connectionFactory id="connectionFactory"
+                           brokerURL="tcp://localhost:61616"/>
+
+    <!--<start id="activemq_queue_bean"/>-->
+    <bean id="queue" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="spitter.queue"/>
+    </bean>
+
+    <bean id="queue2" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="spitter.queue2"/>
+    </bean>
+
+    <!--<end id="activemq_queue_bean"/>-->
+
+    <!--<start id="activemq_topic_bean"/>-->
+    <bean id="topic" class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="spitter.topic"/>
+    </bean>
+
+
+    <bean id="jmsTemplate"
+          class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory" />
+    </bean>
+
+    <bean id="messageGetter" class="com.hson.core.bean.MessageListener" />
+
+    <jms:listener-container>
+        <jms:listener destination="spitter.queue2" ref="messageGetter" method="echo" />
+    </jms:listener-container>
+
+</beans>
