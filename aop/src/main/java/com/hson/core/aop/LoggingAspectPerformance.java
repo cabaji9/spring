@@ -17,7 +17,7 @@ public class LoggingAspectPerformance {
     private static final Logger logger = LoggerFactory.getLogger(LoggingAspectPerformance.class);
 
 
-    @Pointcut("execution(* com.hson.core.bean.Performance.perform(..))")
+    @Pointcut("execution(* com.hson.core.bean.PerformanceBean.perform(..))")
     public void performance(){
         logger.info("POINTCUT PERFORMANCE");
     }
@@ -32,7 +32,7 @@ public class LoggingAspectPerformance {
         logger.info("AFTER!");
     }
 
-    @Pointcut("execution(* com.hson.core.bean.Performance.sing(int)) && args(songNumber)")
+    @Pointcut("execution(* com.hson.core.bean.PerformanceBean.sing(int)) && args(songNumber)")
     public void sing(int songNumber){
 
     }
@@ -44,7 +44,7 @@ public class LoggingAspectPerformance {
     }
 
 
-    @Before("execution(* com.hson.core.bean.Performance.sing(..))")
+    @Before("execution(* com.hson.core.bean.PerformanceBean.sing(..))")
     public void beforeSingPointCut(JoinPoint joinPoint){
         logger.info("logBefore() is running!");
         logger.info("hijacked : " + joinPoint.getSignature().getName());

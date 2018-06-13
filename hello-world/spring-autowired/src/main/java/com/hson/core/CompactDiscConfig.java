@@ -1,5 +1,9 @@
 package com.hson.core;
 
+import com.hson.core.bean.CompactDisc;
+import com.hson.core.bean.MediaPlayer;
+import com.hson.core.bean.SgtPeppers;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,6 +15,11 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.hson")
 public class CompactDiscConfig {
 
+
+    @Bean
+    public SgtPeppers getCompactDisc(){
+        return new SgtPeppers("1","2");
+    }
 
 
 }

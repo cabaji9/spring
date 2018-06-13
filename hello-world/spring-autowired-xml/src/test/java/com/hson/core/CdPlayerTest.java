@@ -32,6 +32,10 @@ public class CdPlayerTest {
     private MediaPlayer mediaPlayer;
 
     @Autowired
+    @Qualifier("cdPlayerOld")
+    private MediaPlayer mediaPlayerOld;
+
+    @Autowired
     @Qualifier("cdPlayeBlankr")
     private MediaPlayer mediaPlayerBlank;
 
@@ -57,6 +61,7 @@ public class CdPlayerTest {
         assertNotNull(mediaPlayerBlank);
         assertNotNull(blankDisk);
         assertNotNull(cdPlayerMethodWire);
+        assertNotNull(mediaPlayerOld);
 
     }
 
@@ -82,6 +87,11 @@ public class CdPlayerTest {
     @Test
     public void testPlayWiredMethodNamespace(){
         cdPlayerMethodWireNameSpace.play();
+    }
+
+    @Test
+    public void testMediaPlayerOld(){
+        mediaPlayerOld.play();
     }
 
 }

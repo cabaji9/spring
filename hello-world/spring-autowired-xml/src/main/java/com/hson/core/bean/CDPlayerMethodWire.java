@@ -16,7 +16,7 @@ public class CDPlayerMethodWire implements MediaPlayer {
 
     private String method;
 
-    @Autowired
+
     public void setCd(CompactDisc cd){
         this.cd = cd;
     }

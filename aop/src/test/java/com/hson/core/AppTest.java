@@ -1,38 +1,48 @@
 package com.hson.core;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import com.hson.core.bean.HelloWorldB;
+import com.hson.core.bean.Performance;
+import com.hson.core.bean.PerformanceBean;
+import com.hson.core.introduction.EncoreableInterface;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = AppConfig.class)
+public class AppTest
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+
+    @Autowired
+    private Performance performanceBean;
+
+    @Autowired
+    private HelloWorldB helloWorldB;
+
+
+
+
+    @Test
+    public void testPerformance(){
+
+        performanceBean.sing(1);
+        performanceBean.perform();
+
+
+        EncoreableInterface encoreableInterface =    (EncoreableInterface)performanceBean;
+        encoreableInterface.performEncore();
+
+
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    @Test
+    public void testHelloWorldB(){
+        helloWorldB.sayHello();
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }

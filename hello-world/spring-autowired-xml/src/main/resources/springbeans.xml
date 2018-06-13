@@ -28,6 +28,11 @@
     </bean>
 
 
+    <bean id="cdPlayerOld" class="com.hson.core.bean.CDPlayer"
+          c:cd-ref="blankDisc">
+    </bean>
+
+
 
 
     <bean id="cdPlayeBlankr" class="com.hson.core.bean.CDPlayer">

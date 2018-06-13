@@ -2,11 +2,13 @@ package com.hson.core.bean;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * This bean is create programatically
  * Created by Hyun Woo Son on 11/9/17.
  */
+@Component
 public class HelloWorldB {
 
     private static final Logger logger = LoggerFactory.getLogger(HelloWorldB.class);

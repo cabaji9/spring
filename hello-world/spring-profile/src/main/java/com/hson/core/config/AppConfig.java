@@ -2,6 +2,7 @@ package com.hson.core.config;
 
 
 import com.hson.core.bean.CompactDisc;
+import com.hson.core.bean.ProfileMethod;
 import com.hson.core.bean.SgtPeppers;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -26,5 +27,19 @@ public class AppConfig {
 //    public CompactDisc getCompactDiscTwo(){
 //        return new SgtPeppers("prod","prodArtist");
 //    }
+
+
+    @Bean
+    @Profile("dev")
+    public ProfileMethod getProfileMethod() {
+        return new ProfileMethod("dev");
+    }
+
+    @Bean
+    @Profile("prod")
+    public ProfileMethod getProfileMethodProd() {
+        return new ProfileMethod("prod");
+    }
+
 
 }

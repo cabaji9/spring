@@ -1,5 +1,6 @@
 package com.hson.core;
 
+import com.hson.core.bean.CDPlayer;
 import com.hson.core.bean.CompactDisc;
 import com.hson.core.bean.MediaPlayer;
 import org.junit.Test;
@@ -24,6 +25,8 @@ public class CdPlayerTest {
     private MediaPlayer mediaPlayer;
 
 
+    @Autowired
+    private CDPlayer cdPlayer;
 
 
     @Test
@@ -35,7 +38,9 @@ public class CdPlayerTest {
 
     @Test
     public void testPlay(){
+
         mediaPlayer.play();
+        cdPlayer.play();
     }
 
 }

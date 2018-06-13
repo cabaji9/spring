@@ -1,26 +1,11 @@
 package com.hson.core.bean;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
-
 /**
- * Created by Hyun Woo Son on 12/11/17
+ * Created by Hyun Woo Son on 6/1/18
  **/
-@Component
-public class Performance {
+public interface Performance  {
 
-    private static final Logger logger = LoggerFactory.getLogger(Performance.class);
+  void perform();
 
-
-    public void perform(){
-
-        logger.info("PERFORM!!!");
-
-    }
-
-
-    public void sing(int songnumber){
-        logger.info("song number {}",songnumber);
-    }
+   void sing(int songnumber);
 }

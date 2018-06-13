@@ -30,8 +30,15 @@ public class SgtPeppers implements CompactDisc {
     @Value("#{cassette_old.getSlowsong().toUpperCase()}")
     private String casseteSong;
 
+    @Value("#{cassette_old.getIsNullValue()?.toUpperCase()}")
+    private String isNullValue;
+
+
     @Value("#{cassette_old.casseteTime == 90?'Long':'short'}")
     private String casseteTime;
+
+    @Value("#{T(System).currentTimeMillis()}")
+    private Long currentTime;
 
 
     @Autowired
@@ -60,5 +67,9 @@ public class SgtPeppers implements CompactDisc {
         logger.info("REal Pi is {}",realPi);
 
         logger.info("Cassete time is {}",casseteTime);
+
+        logger.info("current time {}",currentTime);
+
+        logger.info("isNulll value {}",isNullValue);
     }
 }

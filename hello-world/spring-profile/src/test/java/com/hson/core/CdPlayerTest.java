@@ -25,6 +25,8 @@ public class CdPlayerTest {
     private CompactDisc compactDisc;
 
 
+
+
     @Test
     public void cdShouldNotBeNull(){
         assertNotNull(compactDisc);

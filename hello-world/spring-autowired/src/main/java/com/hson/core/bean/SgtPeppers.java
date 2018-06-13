@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Hyun Woo Son on 11/20/17.
  */
-@Component
 public class SgtPeppers implements CompactDisc {
 
     private static final Logger logger = LoggerFactory.getLogger(SgtPeppers.class);
@@ -15,7 +14,14 @@ public class SgtPeppers implements CompactDisc {
     private String title;
     private String artist;
 
+    public SgtPeppers(){
 
+    }
+
+    public SgtPeppers(String title, String artist) {
+        this.title = title;
+        this.artist = artist;
+    }
 
     public void play()
     {

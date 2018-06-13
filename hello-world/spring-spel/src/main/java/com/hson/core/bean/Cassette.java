@@ -15,6 +15,8 @@ public class Cassette {
 
     private String slowsong = "slow song!";
 
+    private String isNullValue = null;
+
     public Integer casseteTime = 90;
 
     public void playSlowly(){
@@ -29,5 +31,14 @@ public class Cassette {
 
     public void setSlowsong(String slowsong) {
         this.slowsong = slowsong;
+    }
+
+
+    public String getIsNullValue() {
+        return isNullValue;
+    }
+
+    public void setIsNullValue(String isNullValue) {
+        this.isNullValue = isNullValue;
     }
 }
