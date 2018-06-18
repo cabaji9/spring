@@ -12,5 +12,16 @@
 </head>
 <body>
 
+    <form method="post">
+
+        first name : <input type="text" name="firstName" />
+        last name : <input type="text" name="lastName" />
+
+
+        <input type="submit" value="Register"/>
+
+    </form>
+
+
 </body>
 </html>

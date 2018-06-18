@@ -1,5 +1,7 @@
 package com.personal.spring.controller;
 
+import com.personal.spring.model.User;
+import com.personal.spring.persistence.MockSingletonDatabase;
 import com.personal.spring.service.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,28 +25,38 @@ public class HelloController {
     @Autowired
     private HelloService helloService;
 
+    MockSingletonDatabase mockSingletonDatabase = MockSingletonDatabase.getInstance();
 
-    @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String index(Map<String,Object> model){
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(Map<String, Object> model) {
         logger.debug("index() executed");
-        model.put("title",helloService.getSalute("HAOAALALA"));
+        model.put("title", helloService.getSalute("HAOAALALA"));
         return "index";
     }
 
     @RequestMapping(value = "/hello/{name}", method = RequestMethod.GET)
     public ModelAndView hello(@PathVariable("name") String name) {
-
-        logger.debug("hello() is executed - $name {}", name);
-
+        logger.debug("hello() is executed d- $name {}", name);
         ModelAndView model = new ModelAndView();
         model.setViewName("index");
-
         model.addObject("title", helloService.getSalute(name));
-
         return model;
 
     }
 
+
+    @RequestMapping(value = "/hello-user/{name}", method = RequestMethod.GET)
+    public ModelAndView helloUser(@PathVariable("name") String name) {
+
+        logger.debug("hello() is executed - $name {}", name);
+        User user = helloService.getUserByUserName(name);
+        ModelAndView model = new ModelAndView();
+        model.setViewName("index");
+        model.addObject("title", helloService.getSalute(name + " " + user.getLastName()));
+        return model;
+
+    }
 
 
 }
