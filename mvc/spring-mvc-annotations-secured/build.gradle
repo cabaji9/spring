@@ -1,0 +1,37 @@
+group 'com.personal'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'idea'
+apply from: 'gretty.plugin'
+
+// JDK 7
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+    compile 'org.springframework:spring-webmvc:4.2.0.RELEASE'
+    compile 'org.springframework:spring-test:4.2.0.RELEASE'
+    compile 'org.springframework.security:spring-security-web:4.2.0.RELEASE'
+    compile 'org.springframework.security:spring-security-config:4.2.0.RELEASE'
+    compile 'org.springframework.security:spring-security-taglibs:4.2.0.RELEASE'
+    compile 'org.mockito:mockito-all:1.9.5'
+    compile 'javax.servlet:jstl:1.2'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+gretty {
+    httpPort = 8081
+    contextPath = '/spring4'
+    managedClassReload=true
+    // ... many more properties
+}
