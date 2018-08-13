@@ -4,6 +4,7 @@ import com.hson.core.vo.SongVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 
@@ -37,5 +38,13 @@ public class SgtPeppers implements CompactDisc {
     @PreAuthorize("hasRole('ROLE_ADMIN') and #songVo.title.length() == 2")
     public void playSong(SongVo songVo){
         logger.info("song {}",songVo);
+    }
+
+
+    @PostAuthorize("hasRole('ROLE_ADMIN') and returnObject.title == 'LALA'")
+    public     SongVo obtainSongVo(String title,String track){
+        SongVo songVo = new SongVo(title,track);
+        logger.info("songVpo {}",songVo);
+        return songVo;
     }
 }

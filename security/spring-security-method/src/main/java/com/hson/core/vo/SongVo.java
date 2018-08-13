@@ -5,6 +5,14 @@ package com.hson.core.vo;
  */
 public class SongVo {
 
+    public SongVo() {
+    }
+
+    public SongVo(String title, String track) {
+        this.title = title;
+        this.track = track;
+    }
+
     private String title;
 
     private String track;

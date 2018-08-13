@@ -73,7 +73,18 @@ public class CompactDiscTest {
     }
 
 
+    @Test
+    @WithMockUser(username = "user", roles={"ADMIN"})
+    public void testObtainSongVo(){
+        compactDisc.obtainSongVo("LALA","1");
+    }
 
+
+    @Test(expected = AccessDeniedException.class)
+    @WithMockUser(username = "user", roles={"ADMIN"})
+    public void testObtainSongVoFail(){
+        compactDisc.obtainSongVo("LALAs","1");
+    }
 
 
 }

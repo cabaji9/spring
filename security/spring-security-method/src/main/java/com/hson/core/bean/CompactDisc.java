@@ -11,4 +11,6 @@ public interface CompactDisc {
     void play();
 
     void playSong(SongVo songVo);
+
+    SongVo obtainSongVo(String title,String track);
 }
