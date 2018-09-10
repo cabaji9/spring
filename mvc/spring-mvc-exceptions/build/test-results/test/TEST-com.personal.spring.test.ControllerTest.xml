@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.personal.spring.test.ControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-06-25T14:25:16" hostname="hsPro.local" time="0.414">
+  <properties/>
+  <testcase name="testFormControllerView" classname="com.personal.spring.test.ControllerTest" time="0.112"/>
+  <testcase name="testOtherControllerView" classname="com.personal.spring.test.ControllerTest" time="0.027"/>
+  <testcase name="testFormSave" classname="com.personal.spring.test.ControllerTest" time="0.272"/>
+  <system-out><![CDATA[09:25:16,233 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+09:25:16,234 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+09:25:16,234 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/Users/User/java/codigo/personal/spring/mvc/spring-mvc-exceptions/build/resources/test/logback.xml]
+09:25:16,234 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+09:25:16,234 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/Users/User/java/codigo/personal/spring/mvc/spring-mvc-exceptions/build/resources/test/logback.xml]
+09:25:16,234 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/Users/User/java/codigo/personal/spring/mvc/spring-mvc-exceptions/build/resources/main/logback.xml]
+09:25:16,304 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+09:25:16,311 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+09:25:16,316 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+09:25:16,360 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+09:25:16,360 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+09:25:16,360 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+09:25:16,361 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.springframework] to DEBUG
+09:25:16,361 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [org.springframework] to false
+09:25:16,361 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[org.springframework]
+09:25:16,362 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.personal] to DEBUG
+09:25:16,362 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.personal] to false
+09:25:16,362 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[com.personal]
+09:25:16,362 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG
+09:25:16,362 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+09:25:16,362 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+09:25:16,362 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@1f80c369 - Registering current configuration as safe fallback point
+
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /form
+       Parameters = {}
+          Headers = {}
+
+Handler:
+             Type = com.personal.spring.controller.FormController
+           Method = public java.lang.String com.personal.spring.controller.FormController.redirectToForm()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = form
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = /WEB-INF/views/jsp/form.jsp
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /other
+       Parameters = {}
+          Headers = {}
+
+Handler:
+             Type = com.personal.spring.controller.OtherController
+           Method = public java.lang.String com.personal.spring.controller.OtherController.obtainNames(java.util.Map<java.lang.String, java.lang.Object>)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = other
+             View = null
+        Attribute = otherList
+            value = [uno, dos, tres]
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {}
+     Content type = null
+             Body = 
+    Forwarded URL = /WEB-INF/views/jsp/other.jsp
+   Redirected URL = null
+          Cookies = []
+2018-06-25 09:25:17 [Test worker] INFO  c.p.spring.controller.FormController - processRegister | user User{firstName='lala', lastName='lolo'}
+]]></system-out>
+  <system-err><![CDATA[Jun 25, 2018 9:25:15 AM org.springframework.test.context.web.WebTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+INFO: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Jun 25, 2018 9:25:15 AM org.springframework.test.context.web.WebTestContextBootstrapper instantiateListeners
+INFO: Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+Jun 25, 2018 9:25:15 AM org.springframework.test.context.web.WebTestContextBootstrapper instantiateListeners
+INFO: Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+Jun 25, 2018 9:25:15 AM org.springframework.test.context.web.WebTestContextBootstrapper getTestExecutionListeners
+INFO: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@42f9fbf7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@14fe0cdc, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@72489141, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a67b6b5]
+Jun 25, 2018 9:25:15 AM org.springframework.web.context.support.GenericWebApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6410074d: startup date [Mon Jun 25 09:25:15 ECT 2018]; root of context hierarchy
+Jun 25, 2018 9:25:16 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+INFO: Mapped "{[/form]}" onto public java.lang.String com.personal.spring.controller.FormController.redirectToForm()
+Jun 25, 2018 9:25:16 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+INFO: Mapped "{[/form],methods=[POST]}" onto public java.lang.String com.personal.spring.controller.FormController.processRegister(com.personal.spring.model.User)
+Jun 25, 2018 9:25:16 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+INFO: Mapped "{[/],methods=[GET]}" onto public java.lang.String com.personal.spring.controller.HelloController.index(java.util.Map<java.lang.String, java.lang.Object>)
+Jun 25, 2018 9:25:16 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+INFO: Mapped "{[/hello/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.personal.spring.controller.HelloController.hello(java.lang.String)
+Jun 25, 2018 9:25:16 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+INFO: Mapped "{[/hello-user/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.personal.spring.controller.HelloController.helloUser(java.lang.String)
+Jun 25, 2018 9:25:16 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+INFO: Mapped "{[/other],methods=[GET]}" onto public java.lang.String com.personal.spring.controller.OtherController.obtainNames(java.util.Map<java.lang.String, java.lang.Object>)
+Jun 25, 2018 9:25:16 AM org.springframework.web.servlet.handler.SimpleUrlHandlerMapping registerHandler
+INFO: Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+Jun 25, 2018 9:25:16 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+INFO: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6410074d: startup date [Mon Jun 25 09:25:15 ECT 2018]; root of context hierarchy
+Jun 25, 2018 9:25:16 AM org.springframework.mock.web.MockServletContext log
+INFO: Initializing Spring FrameworkServlet ''
+Jun 25, 2018 9:25:16 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization started
+Jun 25, 2018 9:25:16 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization completed in 26 ms
+Jun 25, 2018 9:25:16 AM org.springframework.mock.web.MockServletContext log
+INFO: Initializing Spring FrameworkServlet ''
+Jun 25, 2018 9:25:16 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization started
+Jun 25, 2018 9:25:16 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization completed in 2 ms
+Jun 25, 2018 9:25:17 AM org.springframework.mock.web.MockServletContext log
+INFO: Initializing Spring FrameworkServlet ''
+Jun 25, 2018 9:25:17 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization started
+Jun 25, 2018 9:25:17 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization completed in 1 ms
+Jun 25, 2018 9:25:17 AM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping register
+INFO: Mapped "{[/form]}" onto public java.lang.String com.personal.spring.controller.FormController.redirectToForm()
+Jun 25, 2018 9:25:17 AM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping register
+INFO: Mapped "{[/form],methods=[POST]}" onto public java.lang.String com.personal.spring.controller.FormController.processRegister(com.personal.spring.model.User)
+Jun 25, 2018 9:25:17 AM org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+INFO: Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@61d53211
+Jun 25, 2018 9:25:17 AM org.springframework.mock.web.MockServletContext log
+INFO: Initializing Spring FrameworkServlet ''
+Jun 25, 2018 9:25:17 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization started
+Jun 25, 2018 9:25:17 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization completed in 0 ms
+]]></system-err>
+</testsuite>
